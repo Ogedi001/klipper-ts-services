@@ -1,0 +1,26 @@
+{
+  "name": "@klipper-ts-services/ai-assistant-service-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@klipper-ts-services/ai-assistant-service"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "ai-assistant-service-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@klipper-ts-services/ai-assistant-service:build",
+          "@klipper-ts-services/ai-assistant-service:serve"
+        ]
+      }
+    }
+  }
+}
