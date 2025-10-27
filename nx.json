@@ -12,7 +12,12 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml",
+      "{workspaceRoot}/libs/config/src/**/*",
+      "{workspaceRoot}/libs/common/src/**/*",
+      "{workspaceRoot}/libs/dto/src/**/*"
+    ]
   },
   "nxCloudId": "68f876b964ec897f6e2a9647",
   "plugins": [
@@ -53,11 +58,11 @@
         "targetName": "test"
       },
       "exclude": [
-        "auth-service-e2e/**/*",
-        "notification-service-e2e/**/*",
-        "crm-service-e2e/**/*",
-        "business-service-e2e/**/*",
-        "ai-assistant-service-e2e/**/*"
+        "tests/auth-service-e2e/**/*",
+        "tests/notification-service-e2e/**/*",
+        "tests/crm-service-e2e/**/*",
+        "tests/business-service-e2e/**/*",
+        "tests/ai-assistant-service-e2e/**/*"
       ]
     }
   ],
